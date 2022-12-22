@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  Home
+</head>
+<app-header-home>
+</app-header-home>
+
+<div class="page">
+ 
+    <p style="margin-top:80px ;">
+
+    </p>
+    <p *ngFor="let product of products" class="photo">
+
+      <img class="logoo" [src]="filteredImages( product.url )">
+
+      <span class="space">{{ product.name }} </span>
+
+      <span class="price">{{ product.price |currency }}</span>
+      <span> <mat-icon class="spaceee" (click)="addToCart(product)">add_shopping_cart</mat-icon>
+
+        <button mat-stroked-button class="primary-button" (click)="viewD(product)">View description</button>
+      </span>
+    </p>
+</div>
+
+</html>

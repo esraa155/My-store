@@ -1,0 +1,44 @@
+.logoo {
+  align-items: center;
+  flex-direction: row;
+  height: 250px;
+  width: 200px;
+}
+
+.primary-button {
+  margin: 20px;
+  margin-top: 10px;
+}
+
+.photo {
+  float: left;
+  flex-direction: row-reverse;
+  white-space: nowrap;
+  list-style: none;
+  display: inline;
+  margin-right: 200px;
+  margin-bottom: 100px;
+}
+
+.space {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.spaceee {
+  cursor: pointer;
+}
+
+.example-full-width {
+  display: flex;
+  align-items: center;
+}
+
+.page {
+  margin-left: 200px;
+}

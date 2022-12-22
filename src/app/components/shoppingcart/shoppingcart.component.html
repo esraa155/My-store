@@ -1,0 +1,15 @@
+<app-header [title]="'OUR STORE - SHOPPING CART'"></app-header>
+
+
+
+<ng-container [formGroup]="shopping">
+
+        <app-cart-list formGroupName="cart">
+
+        </app-cart-list>
+        <p style="margin-top:80px ;">
+
+                <app-shopping-details formGroupName="shoppingcartdetails">
+                </app-shopping-details>
+
+</ng-container>

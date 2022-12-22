@@ -1,0 +1,32 @@
+<ng-container [formGroup]="shopping" class="card">
+  
+  <div class="right_section">
+
+    <label>Full Name</label>
+    <mat-form-field style="flex: 1 0 20%;margin-right: 20px; max-width: 200px;" appearance="fill"
+      class=" example-full-width">
+      <mat-label>minimum 3 characters</mat-label>
+      <input type="string" matInput [formControl]="FullName">
+      <mat-error *ngIf="FullName.invalid">The Minimum must be 3 characters</mat-error>
+    </mat-form-field>
+    <label>Address</label>
+    <mat-form-field style="flex: 1 0 20%;margin-right: 20px; max-width: 200px;" appearance="fill"
+      class=" example-full-width">
+      <mat-label>minimum 6 characters</mat-label>
+      <input type="string" matInput [formControl]="Address">
+      <mat-error *ngIf="Address.invalid">The Minimum must be 6 characters</mat-error>
+    </mat-form-field>
+    <label>Credit Card Number</label>
+    <mat-form-field style="flex: 1 0 20%;margin-right: 20px; max-width: 200px;" appearance="fill"
+      class=" example-full-width">
+      <mat-label>16-digit number</mat-label>
+      <input type="string" matInput [formControl]="credit">
+      <mat-error *ngIf="credit.invalid">The Minimum must be 16-digit number</mat-error>
+    </mat-form-field>
+
+    <div class="next-button-container">
+      <button mat-stroked-button class="primary-button" (click)="onsubmit()">Submit</button>
+    </div>
+
+  </div>
+</ng-container>

@@ -1,0 +1,27 @@
+mat-toolbar {
+  background-color: #212529;
+}
+
+.icon {
+  background-color: white;
+  margin-right: -20px;
+}
+
+.reset-icon {
+  width: 25px;
+}
+
+.logoo {
+
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  height: 50px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
