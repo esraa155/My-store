@@ -50,10 +50,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CurrencyPipe } from '@angular/common';
 import { ShoppingcartComponent } from './components/shoppingcart/shoppingcart.component';
-import { ShoppingDetailsComponent } from './components/shoppingcart/shopping-details/shopping-details.component';
+
 import { CartListComponent } from './components/shoppingcart/cart-list/cart-list.component';
 import { ProductListComponent } from './components/product/product-list/product-list.component';
 import { ProductItemComponent } from './components/product/product-item/product-item.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -64,9 +65,10 @@ import { ProductItemComponent } from './components/product/product-item/product-
     ShoppingcartComponent,
     ProductListComponent,
    HeaderComponent,
-   ShoppingDetailsComponent,
+  
    CartListComponent,
    ProductItemComponent,
+   ConfirmationComponent,
   ],
 
   

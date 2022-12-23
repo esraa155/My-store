@@ -20,7 +20,7 @@ export class CartListComponent implements OnInit {
    products : IProducts[] = [];
    @Input() formGroupName!: string
    private subscriptions = new Subscription();
-   Quantity = new FormControl('', [Validators.min(0)]);
+   Quantity = new FormControl('', [Validators.required,Validators.min(1)]);
     shopping! : FormGroup;
     @ViewChildren("subTotalWrap")subTotalItems!: QueryList<ElementRef>;
     @ViewChildren("subTotalWrap_existing")subTotalItems_existing!: QueryList<ElementRef>;
@@ -42,11 +42,6 @@ export class CartListComponent implements OnInit {
     const imageString = value.replace('http:/13.232.25.79:4105', 'http://13.232.25.79:4105')
     return imageString
   }
-
-
-  
-    
-
 
 
 get total() {
@@ -73,6 +68,7 @@ changeSubtotal(item, index) {
 removeFromCart(item) {
   this.cartService.removeItem(item);
   this.items = this.cartService.getItems();
+  alert('Your product has been deleted to the cart!');
 }
 
 //----- clear cart item
@@ -80,6 +76,7 @@ clearCart() {
  
   this.cartService.clearCart();
   this.items = [...this.cartService.getItems()];
+  alert('Your products have been removed to the cart!');
 }
 
 

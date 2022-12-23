@@ -1,3 +1,5 @@
+
+<ng-container [formGroup]="shopping" >
 <h3>Cart</h3>
 <div *ngFor="let item of items;let i = index" class="cart-item">
   <img class="logoo" [src]="filteredImages( item.url )">
@@ -5,9 +7,10 @@
   {{ item.price | currency }}
   <mat-form-field class="example-full-width">
     <mat-label>Quantity</mat-label>
-    <input matInput type="number" [(ngModel)]="item.qtyTotal" [ngModelOptions]="{standalone: true}" min="1"
+    <input matInput type="number" [(ngModel)]="item.qtyTotal" min="1"
       type="number" class="form-control" (ngModelChange)="changeSubtotal(item ,i)"
-      required>
+      required  formControlName="Quantity" >
+      <mat-error *ngIf="Quantity.invalid">The Minimum must be 1</mat-error>
   </mat-form-field>
   <div class="col-1 pl-0">
     <button mat-stroked-button class="btn btn-secondary" (click)="removeFromCart(item)">Remove Item</button>
@@ -27,9 +30,11 @@
   <button mat-stroked-button class="btn btn-primary  " (click)="clearCart()"> Clear Items</button>
   <p style="margin-top:50px ;"></p>
   
-  <div style="margin-bottom: 20px;text-align: center;" > 
-    <button fxfxFlexAllign="center" mat-stroked-button class="primary-button" [routerLink]="'/Details'">Check Out</button>
+ 
+<div style="margin-bottom: 20px;" fxLayout="row" fxLayoutAlign="space-evenly center"> 
+  <button  mat-stroked-button class="primary-button" [routerLink]="'/Confirmation'">Check Out</button>
+  <button  mat-stroked-button class="primary-button"  [routerLink]="'/home'">Back to home</button>
 </div>
-
  
 </div>
+</ng-container>
